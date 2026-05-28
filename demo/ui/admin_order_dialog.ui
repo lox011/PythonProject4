@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminOrderDialog</class>
+ <widget class="QDialog" name="AdminOrderDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>480</width><height>340</height></rect></property>
+  <property name="windowTitle"><string>Заказ</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item><layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0"><widget class="QLabel" name="labelClient"><property name="text"><string>Клиент</string></property></widget></item>
+    <item row="0" column="1"><widget class="QComboBox" name="comboBoxClient"/></item>
+    <item row="1" column="0"><widget class="QLabel" name="labelProduct"><property name="text"><string>Товар</string></property></widget></item>
+    <item row="1" column="1"><widget class="QComboBox" name="comboBoxProduct"/></item>
+    <item row="2" column="0"><widget class="QLabel" name="labelQuantity"><property name="text"><string>Количество</string></property></widget></item>
+    <item row="2" column="1"><widget class="QSpinBox" name="spinBoxQuantity"><property name="minimum"><number>1</number></property><property name="maximum"><number>100</number></property></widget></item>
+    <item row="3" column="0"><widget class="QLabel" name="labelDestination"><property name="text"><string>Куда заказать</string></property></widget></item>
+    <item row="3" column="1"><widget class="QComboBox" name="comboBoxDestination"/></item>
+    <item row="4" column="0"><widget class="QLabel" name="labelPlace"><property name="text"><string>Адрес / место</string></property></widget></item>
+    <item row="4" column="1"><widget class="QLineEdit" name="lineEditPlace"/></item>
+    <item row="5" column="0"><widget class="QLabel" name="labelStatus"><property name="text"><string>Статус</string></property></widget></item>
+    <item row="5" column="1"><widget class="QComboBox" name="comboBoxStatus"/></item>
+   </layout></item>
+   <item><widget class="QLabel" name="labelTotal"><property name="text"><string>Сумма: 0</string></property></widget></item>
+   <item><widget class="QDialogButtonBox" name="buttonBox"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="standardButtons"><set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set></property></widget></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

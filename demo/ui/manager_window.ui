@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManagerWindow</class>
+ <widget class="QMainWindow" name="ManagerWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1000</width><height>700</height></rect></property>
+  <property name="windowTitle"><string>Менеджер</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item><layout class="QHBoxLayout" name="topLayout">
+     <item><widget class="QLabel" name="labelCurrentUser"><property name="text"><string>Менеджер</string></property></widget></item>
+     <item><spacer name="horizontalSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item><widget class="QPushButton" name="pushButtonLogout"><property name="text"><string>Выйти</string></property></widget></item>
+    </layout></item>
+    <item><widget class="QTabWidget" name="tabWidget"><property name="currentIndex"><number>0</number></property>
+     <widget class="QWidget" name="tabProducts"><attribute name="title"><string>Товары</string></attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutProducts">
+       <item><layout class="QHBoxLayout" name="filterLayout">
+        <item><widget class="QLineEdit" name="lineEditSearch"><property name="placeholderText"><string>Поиск по названию</string></property></widget></item>
+        <item><widget class="QPushButton" name="pushButtonSearch"><property name="text"><string>Найти</string></property></widget></item>
+        <item><widget class="QComboBox" name="comboBoxCategory"/></item>
+        <item><widget class="QPushButton" name="pushButtonFilter"><property name="text"><string>Фильтр</string></property></widget></item>
+       </layout></item>
+       <item><layout class="QHBoxLayout" name="sortLayout">
+        <item><widget class="QComboBox" name="comboBoxSort"/></item>
+        <item><widget class="QPushButton" name="pushButtonSortUp"><property name="text"><string>↑</string></property></widget></item>
+        <item><widget class="QPushButton" name="pushButtonSortDown"><property name="text"><string>↓</string></property></widget></item>
+        <item><widget class="QPushButton" name="pushButtonRefreshProducts"><property name="text"><string>Все товары</string></property></widget></item>
+       </layout></item>
+       <item><widget class="QScrollArea" name="scrollAreaProducts"><property name="widgetResizable"><bool>true</bool></property><widget class="QWidget" name="scrollAreaWidgetContentsProducts"><property name="geometry"><rect><x>0</x><y>0</y><width>950</width><height>500</height></rect></property></widget></widget></item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabOrders"><attribute name="title"><string>Заказы</string></attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutOrders">
+       <item><widget class="QTableWidget" name="tableWidgetOrders"/></item>
+       <item><layout class="QHBoxLayout" name="orderStatusLayout">
+        <item><widget class="QComboBox" name="comboBoxStatus"/></item>
+        <item><widget class="QPushButton" name="pushButtonChangeStatus"><property name="text"><string>Изменить статус выбранного заказа</string></property></widget></item>
+        <item><widget class="QPushButton" name="pushButtonRefreshOrders"><property name="text"><string>Обновить заказы</string></property></widget></item>
+       </layout></item>
+      </layout>
+     </widget>
+    </widget></item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

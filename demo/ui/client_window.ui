@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientWindow</class>
+ <widget class="QMainWindow" name="ClientWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>900</width><height>650</height></rect></property>
+  <property name="windowTitle"><string>Клиент</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item><layout class="QHBoxLayout" name="topLayout">
+     <item><widget class="QLabel" name="labelCurrentUser"><property name="text"><string>Клиент</string></property></widget></item>
+     <item><spacer name="horizontalSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item><widget class="QPushButton" name="pushButtonLogout"><property name="text"><string>Выйти</string></property></widget></item>
+    </layout></item>
+    <item><widget class="QTabWidget" name="tabWidget"><property name="currentIndex"><number>0</number></property>
+     <widget class="QWidget" name="tabProducts"><attribute name="title"><string>Товары</string></attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutProducts">
+       <item><widget class="QLabel" name="labelHint"><property name="text"><string>Нажмите на карточку товара, чтобы оформить заказ</string></property></widget></item>
+       <item><widget class="QPushButton" name="pushButtonRefreshProducts"><property name="text"><string>Обновить товары</string></property></widget></item>
+       <item><widget class="QScrollArea" name="scrollAreaProducts"><property name="widgetResizable"><bool>true</bool></property><widget class="QWidget" name="scrollAreaWidgetContentsProducts"><property name="geometry"><rect><x>0</x><y>0</y><width>850</width><height>500</height></rect></property></widget></widget></item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabOrders"><attribute name="title"><string>Мои заказы</string></attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutOrders">
+       <item><widget class="QPushButton" name="pushButtonRefreshOrders"><property name="text"><string>Обновить заказы</string></property></widget></item>
+       <item><widget class="QTableWidget" name="tableWidgetOrders"/></item>
+      </layout>
+     </widget>
+    </widget></item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
